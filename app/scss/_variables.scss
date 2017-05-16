@@ -2,11 +2,14 @@
 // VARIABLES
 // ***********************************
 
-@import url('http://fonts.googleapis.com/css?family=Bitter:400,700,400italic');
-//font-family: 'Bitter', serif;
+@font-face {
+  font-family: 'mv_regular';
+  src: url('../fonts/mv-regular-webfont.woff2') format('woff2'),
+  url('../fonts/mv-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-@import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic');
-//font-family: 'Roboto', sans-serif;
+}
 
 
 // LAYOUT
@@ -19,8 +22,8 @@ $large: 960px;
 $extra-large: 1600px;
 
 // TYPOGRAPHY
-$font-family-title: '.SF NS Text', 'Roboto', sans-serif;
-$font-family-primary: '.SF NS Text', 'Roboto', sans-serif;  // "Helvetica Neue",Helvetica,Arial,sans-serif
+$font-family-title: '.SF NS Text', 'mv_regular', sans-serif;
+$font-family-primary: '.SF NS Text', 'mv_regular', sans-serif;  // "Helvetica Neue",Helvetica,Arial,sans-serif
 $font_mono: 10px 'Monaco', monospace;
 $font-weight-title: normal;
 $font-weight-body: 300;
