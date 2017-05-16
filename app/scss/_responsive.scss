@@ -80,11 +80,14 @@
     }
     .slider-content {
       padding-bottom: 10rem;
+      margin-bottom: 0;
     }
     .features-block {
       @include span(4);
 
       &.left {
+        position: relative;
+        z-index: 1;
         .feature-description{
           text-align: right;
         }
@@ -108,6 +111,8 @@
         }
       }
       &.right {
+        position: relative;
+        z-index: 1;
         .feature-title {
           text-align: left;
         }
@@ -115,6 +120,8 @@
       }
       .feature-description {
         text-align: left;
+        margin-bottom: 2rem;
+        min-height: 11.8rem;
       }
     }
   }
@@ -176,6 +183,15 @@
   #header .img-container {
     margin-top: 4rem;
   }
+  .container {
+    .tool-features {
+      &:before {
+        top: 5rem;
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
   .tinder-meet-section {
     .img-container {
       width: 65%;
@@ -210,6 +226,15 @@
   }
   #content {
     padding-top: 26.3rem;
+  }
+  .container {
+    .tool-features {
+      &:before {
+        top: 5rem;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
   }
   .tool-section {
     margin-bottom: 33rem;

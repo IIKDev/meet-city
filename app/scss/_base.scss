@@ -179,14 +179,14 @@ $susy: (
 	}
 	.slider-content {
 		@include container(100%);
+		margin-bottom: 6rem;
 	}
 	.features-block {
 		&.center {
 			display: none;
 		}
 		.feature-description {
-			min-height: 11.8rem;
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			text-align: center;
 		}
 	}
