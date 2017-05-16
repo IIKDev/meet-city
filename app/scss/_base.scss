@@ -2,7 +2,7 @@
 // BASE
 // ***********************************
 html {
-	font-size: 10px;
+	font-size: $global-font-size;
 }
 
 body{
@@ -46,7 +46,7 @@ $susy: (
 }
 
 #header {
-	height: 72.5rem;
+	height: 60rem;
 	background: url('../img/bg-header.jpg') no-repeat;
 	background-size: 100% 100%;
 	position: relative;
@@ -60,7 +60,6 @@ $susy: (
 		display: block;
 	}
 	.site-title {
-		/*width: 74.6rem;*/
 		height: 12rem;
 		margin: auto;
 		color: $white;
@@ -68,11 +67,12 @@ $susy: (
 	.apple-button {
 		display: block;
 		margin: auto;
+		position: relative;
+		z-index: 1;
 	}
 	.img-container {
-		width: 90.45%;
-		left: 1.7%;
-		margin-top: -2rem;
+		width: 94%;
+		margin-top: 3rem;
 
 		img {
 			width: 100%;
@@ -80,39 +80,69 @@ $susy: (
 	}
 }
 #content {
-	padding-top: 23.3rem;
+	padding-top: 15%;
 	background: url('../img/bg-content.jpg') no-repeat;
 	background-size: 100% auto;
 }
+.container {
+	padding: 0 2rem;
+	margin: auto;
+
+	.tool-features {
+
+		position: relative;
+		padding-top: 11.6rem;
+		font-size: $font-size;
+		line-height: 1.86;
+		text-align: center;
+		color: $grey;
+		padding-bottom: 3rem;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 2rem;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 9rem;
+			height: 9rem;
+			background-size: 100% 100%;
+		}
+		&.real-meetings:before {
+			background: url('../img/icon01.png') no-repeat;
+		}
+		&.date-now:before  {
+			background: url('../img/icon02.png') no-repeat;
+		}
+		&.star-dating:before {
+			background: url('../img/icon03.png') no-repeat;
+		}
+	}
+}
 .section-description,
 .feature-description {
-	font-size: $font-size;
+	font-size: 2rem;
 	line-height: 1.86;
 	color: $grey;
 }
 .tool-section {
-	margin-bottom: 33rem;
+	margin-bottom: 4rem;
 }
 .tinder-meet-section {
 	position: relative;
 	margin-bottom: 9.5rem;
 
 	.img-container {
-		float: right;
-		width: 79%;
+		width: 100%;
 
 		img {
 			width: 100%;
 		}
 	}
-	.positioned-content {
-		position: absolute;
-		left: 13.2rem;
-		bottom: 17.7rem;
-		width: 42.5rem;
-	}
-	.section-title {
-		text-align: left;
+	.section-description {
+		text-align: center;
+		padding: 0 2rem;
 	}
 }
 .distinguishing-features{
@@ -120,7 +150,7 @@ $susy: (
 		text-align: center;
 		list-style: none;
 		padding: 0;
-		margin: 5rem 0;
+		margin: 3rem 0;
 	}
 	.slide-mark {
 		display: inline-block;
@@ -149,112 +179,41 @@ $susy: (
 	}
 	.slider-content {
 		@include container(100%);
-		padding-bottom: 15rem;
 	}
 	.features-block {
-		@include span(4);
-
-		&.left {
-			text-align: right;
-			.feature-title {
-				text-align: right;
-			}
-		}
 		&.center {
-			min-height: 1px;
-			position:relative;
-
-			.img-container {
-				position: absolute;
-				left: -118%;
-				width: 340%;
-
-				img {
-					width: 100%;
-				}
-			}
-
-		}
-		&.right {
-			.feature-title {
-				text-align: left;
-			}
-			text-align: left;
+			display: none;
 		}
 		.feature-description {
 			min-height: 11.8rem;
 			margin-bottom: 2rem;
+			text-align: center;
 		}
 	}
 }
 .meetcity-for-iphone {
 	position: relative;
-	/*margin-bottom: -2rem;*/
+	margin-bottom: 8rem;
 
 	.img-container {
-		float: left;
-		margin-left: 24.4rem;
-		width: 32%;
-		img {
-			width: 100%
-		}
-	}
-	.positioned-content {
-		position: absolute;
-		top: 14.4rem;
-		right: 32rem;
-		width: 43.7rem;
+		display: none;
 	}
 	.section-title {
 		margin-bottom: 0;
 	}
 	.feature-title {
-		margin-bottom: 6.2rem;
+		margin-bottom: 4.2rem;
 	}
 	.section-description {
 		text-align: center;
-		margin-bottom: 12rem;
+		margin-bottom: 4rem;
+		padding: 0 2rem;
 	}
 	.apple-button-black {
 		margin: auto;
 	}
 }
-.container {
-	@include container(1100px);
-	margin: auto;
 
-	.tool-features {
-		@include span(4);
-
-		position: relative;
-		padding-top: 11.6rem;
-		font-size: $font-size;
-		line-height: 1.86;
-		text-align: center;
-		color: $grey;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 5rem;
-			left: 0;
-			right: 0;
-			margin: auto;
-			width: 6rem;
-			height: 6rem;
-			background-size: 100% 100%;
-		}
-		&.real-meetings:before {
-			background: url('../img/icon01.png') no-repeat;
-		}
-		&.date-now:before  {
-			background: url('../img/icon02.png') no-repeat;
-		}
-		&.star-dating:before {
-			background: url('../img/icon03.png') no-repeat;
-		}
-	}
-}
 .tool-section-footer {
 	background: url('../img/bg-footer.jpg') no-repeat;
 	background-size: cover;
@@ -279,20 +238,22 @@ $susy: (
 	}
 }
 .social-networks {
-	padding: 5.2rem 0;
+	padding: 2.2rem 0;
+
 	.col {
-		@include span(6);
+		padding: 1rem 0;
 	}
 	.section-title {
 		margin: 0;
 	}
-	.social-icon {
+	.social-icons {
 		@include container(100%);
 	}
 	.social-icon {
 		@include span(3);
 		color: $grey;
 		font-size: 3.6rem;
+		text-align: center;
 
 		&:hover, &:active, &:focus {
 			color: #fb225a;
@@ -301,9 +262,10 @@ $susy: (
 }
 .copyright {
 	padding: 2.1rem 0 2.7rem;
-	font-size: 1.2rem;
+	font-size: 2rem;
 	color: #7c93ad;
 	background-color: #13152d;
+	text-align: center;
 }
 /*
 .page{

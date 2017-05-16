@@ -1,3 +1,252 @@
-@include susy-breakpoint($large) {
+@include susy-breakpoint($small) {
+  html {font-size: 8px;}
+  #header .img-container {
+    margin-top: -1rem;
+  }
+}
+@include susy-breakpoint($medium) {
+  html {
+    font-size: 10px;
+  }
 
+  .section-title {
+    padding: 0;
+  }
+  .feature-title {
+    font-size: 1.8rem;
+  }
+  .section-description,
+  .feature-description {
+    font-size: $font-size;
+  }
+  #header {
+    height: 72.5rem;
+
+    .logo {
+      padding-top: 4.4rem;
+    }
+    .site-title {
+      height: 12rem;
+    }
+    .img-container {
+      width: 90.45%;
+      left: 1.7%;
+      margin-top: 11rem;
+    }
+  }
+
+  .container {
+    @include container(1100px);
+    padding: 0;
+
+
+    .tool-features {
+      @include span(4);
+      padding-bottom: 0;
+
+      &:before {
+        top: 5rem;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+  .tool-section {
+    margin-bottom: 13rem;
+  }
+  .tinder-meet-section {
+
+    .img-container {
+      float: right;
+      width: 54%;
+    }
+    .positioned-content {
+      position: absolute;
+      left: 4%;
+      bottom: 0;
+      width: 40rem;
+    }
+    .section-title {
+      text-align: left;
+    }
+    .section-description {
+      text-align: left;
+      padding: 0;
+    }
+  }
+  .distinguishing-features{
+    .slide-marks {
+      margin: 5rem 0;
+    }
+    .slider-content {
+      padding-bottom: 10rem;
+    }
+    .features-block {
+      @include span(4);
+
+      &.left {
+        .feature-description{
+          text-align: right;
+        }
+        .feature-title {
+          text-align: right;
+        }
+      }
+      &.center {
+        display: block;
+        min-height: 1px;
+        position:relative;
+
+        .img-container {
+          position: absolute;
+          left: -118%;
+          width: 340%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+      &.right {
+        .feature-title {
+          text-align: left;
+        }
+        text-align: left;
+      }
+      .feature-description {
+        text-align: left;
+      }
+    }
+  }
+  .meetcity-for-iphone {
+    margin-bottom: -2rem;
+
+    .img-container {
+      display: block;
+      float: left;
+      margin-left: 4%;
+      width: 32%;
+      img {
+        width: 100%
+      }
+    }
+    .positioned-content {
+      position: absolute;
+      top: 0;
+      right: 4%;
+      width: 43.7rem;
+    }
+    .feature-title {
+      margin-bottom: 6.2rem;
+    }
+    .section-description {
+      margin-bottom: 6rem;
+    }
+  }
+  .social-networks {
+    padding: 2.2rem 0;
+    .col {
+      @include span(6);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .section-title {
+      margin: 0;
+      padding: 0;
+    }
+    .social-icon {
+      @include container(100%);
+    }
+    .social-icon {
+      @include span(3);
+      color: $grey;
+      font-size: 3.6rem;
+      text-align: left;
+
+      &:hover, &:active, &:focus {
+        color: #fb225a;
+      }
+    }
+  }
+}
+@include susy-breakpoint($large) {
+  html{
+    font-size: 9px;
+  }
+  #header .img-container {
+    margin-top: 4rem;
+  }
+  .tinder-meet-section {
+    .img-container {
+      width: 65%;
+    }
+    .positioned-content {
+       left: 4%;
+       bottom: 26%;
+       width: 40rem;
+     }
+  }
+  .distinguishing-features{
+    .slider-content {
+      padding-bottom: 17rem;
+    }
+  }
+  .meetcity-for-iphone {
+
+    .img-container {
+      margin-left: 10%;
+      width: 32%;
+    }
+    .positioned-content {
+      top: 20%;
+      right: 10%;
+    }
+  }
+}
+@include susy-breakpoint($extra-large) {
+  html{font-size: 10px};
+  #header .img-container {
+    margin-top: -2rem;
+  }
+  #content {
+    padding-top: 26.3rem;
+  }
+  .tool-section {
+    margin-bottom: 33rem;
+  }
+  .tinder-meet-section {
+    .img-container {
+      width: 79%;
+    }
+    .positioned-content {
+      left: 13.2rem;
+      bottom: 17.7rem;
+      width: 42.5rem;
+    }
+  }
+  .meetcity-for-iphone {
+
+    .img-container {
+      display: block;
+      float: left;
+      margin-left: 24.4rem;
+      width: 32%;
+    }
+    .positioned-content {
+      position: absolute;
+      top: 14.4rem;
+      right: 32rem;
+      width: 43.7rem;
+    }
+    .section-description {
+      margin-bottom: 12rem;
+    }
+  }
+  .social-networks {
+    padding: 5.2rem 0;
+  }
+  .copyright {
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }

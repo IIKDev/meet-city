@@ -19,8 +19,9 @@ button {
     color: #464646;
     box-sizing: border-box;
 
-  a:hover, a:active, a:focus {
-    background: #ccc;
+  &:hover, &:active, &:focus {
+      color: $white;
+      background: $black;
   }
 }
 .apple-button-black {
