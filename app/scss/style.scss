@@ -23,6 +23,7 @@
 @import "typography"; // typography and links
 @import "images";
 @import "icons";
+@import "responsive";
 
 
 
@@ -30,7 +31,7 @@
 // UI ELEMENTS
 // ***********************************
 // @import "ui/lists";
-// @import "ui/buttons";
+@import "ui/buttons";
 // @import "ui/tables";
 // @import "ui/forms";
 // @import "ui/panels-notifications";

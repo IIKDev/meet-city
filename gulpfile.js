@@ -150,7 +150,7 @@ gulp.task('build', ['build:copy', 'build:remove']);
 
 gulp.task ('watch', function(){
 	gulp.watch('app/scss/**/*.scss', ['styles']);
-	gulp.watch('app/js/**/*.js', ['scripts']);
+	gulp.watch(['app/js/**/*.js', '!app/js/**/*.min.js'], ['scripts']);
   	gulp.watch('app/**/*.html', ['html']);
 });
 

@@ -7,55 +7,33 @@ button {
     margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
     vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
+.apple-button {
+    width: 17.2rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+    background-color: $white;
+    padding: 1rem 1.8rem;
+    font-family: $font-family-primary;
+    font-size: 2.2rem;
+    text-align: left;
+    color: #464646;
+    box-sizing: border-box;
 
-.button, button, input[type="submit"], input[type="button"], input[type="reset"] {
-    display: inline-block;
-    position: relative;
-    padding: 8px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: normal;
-    border: 0 none;
-    margin-top: 0 5px;
-	font-size: 14px;
-	@include fade;
-    font-weight: $font-weight-body;
-    font-family: $font-family-title;
-    text-transform: capitalize;
+  a:hover, a:active, a:focus {
+    background: #ccc;
+  }
 }
-
-.button, button, input[type="submit"], input[type="button"], input[type="reset"]{
-	background: $button-color;
-	color: #fff !important;
-
-	&:hover{
-		background: $button-color-hover;
-	}
-}
-
-input[type="submit"]{
-    padding-top: 9px;
-    padding-bottom: 9px;
-}
-
-input[type=submit][disabled=disabled], button[disabled=disabled], a.disabled, .button.disabled, button.disabled {
-    background: $button-color-disabled;
-    color: $white !important;
-    opacity:0.6;
-    cursor: default;
-    pointer-events: none;
-}
-
-.img-button{
-    border: none;
-    padding: 0;
+.apple-button-black {
+    display: block;
+    width: 14.63rem;
+    height: 4.36rem;
+    background: black;
+    color: $white;
+    background: url("../img/app-store-black.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 // colors here
 
-.button, button, input[type="submit"]{
-	background: $button-color;
-	color: #fff !important;
-}
 
 

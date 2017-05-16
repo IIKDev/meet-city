@@ -1,22 +1,19 @@
 // ***********************************
 // BASE
 // ***********************************
+html {
+	font-size: 10px;
+}
 
 body{
 	color: $body-text;
 	margin: 0;
 	padding: 0;
 	background: $color-body-bg;
-	line-height: $line-height-mobile;
+	line-height: $line-height;
+	font-size: $font-size;
 	font-family: $font-family-primary;
-	font-size: $font-size-mobile;
-	font-size: $line-height-mobile;
 	font-weight: $font-weight-body;
-
-	@include breakpoint($break-menu){
-		font-size: $font-size;
-		line-height: $line-height;
-	}
 }
 
 
@@ -32,10 +29,283 @@ $susy: (
 	gutter-position: inside,
 );
 
+.clear-fix:after {
+	content: '.';
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	display: block;
+}
+#wrapper {
+	@include container($container);
+	box-shadow: 0rem 0rem 2rem #8a8a8a;
+}
+
 #header, #content, .page{
 	overflow: hidden;  // clearfix
 }
 
+#header {
+	height: 72.5rem;
+	background: url('../img/bg-header.jpg') no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	overflow: visible;
+
+	.logo {
+		width: 25.6rem;
+		height: 25.6rem;
+		margin: auto;
+		padding-top: 4.4rem;
+		display: block;
+	}
+	.site-title {
+		/*width: 74.6rem;*/
+		height: 12rem;
+		margin: auto;
+		color: $white;
+	}
+	.apple-button {
+		display: block;
+		margin: auto;
+	}
+	.img-container {
+		width: 90.45%;
+		left: 1.7%;
+		margin-top: -2rem;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+#content {
+	padding-top: 23.3rem;
+	background: url('../img/bg-content.jpg') no-repeat;
+	background-size: 100% auto;
+}
+.section-description,
+.feature-description {
+	font-size: $font-size;
+	line-height: 1.86;
+	color: $grey;
+}
+.tool-section {
+	margin-bottom: 33rem;
+}
+.tinder-meet-section {
+	position: relative;
+	margin-bottom: 9.5rem;
+
+	.img-container {
+		float: right;
+		width: 79%;
+
+		img {
+			width: 100%;
+		}
+	}
+	.positioned-content {
+		position: absolute;
+		left: 13.2rem;
+		bottom: 17.7rem;
+		width: 42.5rem;
+	}
+	.section-title {
+		text-align: left;
+	}
+}
+.distinguishing-features{
+	.slide-marks {
+		text-align: center;
+		list-style: none;
+		padding: 0;
+		margin: 5rem 0;
+	}
+	.slide-mark {
+		display: inline-block;
+		width: 4.4rem;
+		height: 4.4rem;
+		list-style: none;
+		position: relative;
+	}
+	.slide-mark:after {
+		content: '';
+		border-radius: 100%;
+		width: 1.1rem;
+		height: 1.1rem;
+		background: #e8edfa;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	.slide-mark.active:after {
+		width: 4.4rem;
+		height: 4.4rem;
+		background-image: linear-gradient(to bottom, #fb3671, #fb225a);
+	}
+	.slider-content {
+		@include container(100%);
+		padding-bottom: 15rem;
+	}
+	.features-block {
+		@include span(4);
+
+		&.left {
+			text-align: right;
+			.feature-title {
+				text-align: right;
+			}
+		}
+		&.center {
+			min-height: 1px;
+			position:relative;
+
+			.img-container {
+				position: absolute;
+				left: -118%;
+				width: 340%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+		}
+		&.right {
+			.feature-title {
+				text-align: left;
+			}
+			text-align: left;
+		}
+		.feature-description {
+			min-height: 11.8rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+.meetcity-for-iphone {
+	position: relative;
+	/*margin-bottom: -2rem;*/
+
+	.img-container {
+		float: left;
+		margin-left: 24.4rem;
+		width: 32%;
+		img {
+			width: 100%
+		}
+	}
+	.positioned-content {
+		position: absolute;
+		top: 14.4rem;
+		right: 32rem;
+		width: 43.7rem;
+	}
+	.section-title {
+		margin-bottom: 0;
+	}
+	.feature-title {
+		margin-bottom: 6.2rem;
+	}
+	.section-description {
+		text-align: center;
+		margin-bottom: 12rem;
+	}
+	.apple-button-black {
+		margin: auto;
+	}
+}
+.container {
+	@include container(1100px);
+	margin: auto;
+
+	.tool-features {
+		@include span(4);
+
+		position: relative;
+		padding-top: 11.6rem;
+		font-size: $font-size;
+		line-height: 1.86;
+		text-align: center;
+		color: $grey;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 5rem;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 6rem;
+			height: 6rem;
+			background-size: 100% 100%;
+		}
+		&.real-meetings:before {
+			background: url('../img/icon01.png') no-repeat;
+		}
+		&.date-now:before  {
+			background: url('../img/icon02.png') no-repeat;
+		}
+		&.star-dating:before {
+			background: url('../img/icon03.png') no-repeat;
+		}
+	}
+}
+.tool-section-footer {
+	background: url('../img/bg-footer.jpg') no-repeat;
+	background-size: cover;
+	padding: 3.3rem 0 8.1rem;
+
+	.feature-title {
+		color: $white;
+	}
+	.feature-description {
+		color: $white;
+	}
+	.tool-features {
+		&.matches-on-a-map:before {
+			background: url('../img/icon04.png') no-repeat;
+		}
+		&.dating-planner:before {
+			background: url('../img/icon05.png') no-repeat;
+		}
+		&.check-in-and-feedback:before {
+			background: url('../img/icon06.png') no-repeat;
+		}
+	}
+}
+.social-networks {
+	padding: 5.2rem 0;
+	.col {
+		@include span(6);
+	}
+	.section-title {
+		margin: 0;
+	}
+	.social-icon {
+		@include container(100%);
+	}
+	.social-icon {
+		@include span(3);
+		color: $grey;
+		font-size: 3.6rem;
+
+		&:hover, &:active, &:focus {
+			color: #fb225a;
+		}
+	}
+}
+.copyright {
+	padding: 2.1rem 0 2.7rem;
+	font-size: 1.2rem;
+	color: #7c93ad;
+	background-color: #13152d;
+}
+/*
 .page{
 	@include container($container);
 	background: $white;
@@ -64,5 +334,5 @@ $susy: (
 		    @include span(4);
 		 }
 	}	
-} // content
+}*/ // content
 
