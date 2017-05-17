@@ -160,15 +160,13 @@
     .section-title {
       margin: 0;
       padding: 0;
+      padding-left: 2rem;
     }
     .social-icon {
       @include container(100%);
     }
     .social-icon {
-      @include span(3);
-      color: $grey;
-      font-size: 3.6rem;
-      text-align: left;
+      @include span(4);
 
       &:hover, &:active, &:focus {
         color: #fb225a;
@@ -216,6 +214,11 @@
     .positioned-content {
       top: 20%;
       right: 10%;
+    }
+  }
+  .social-networks {
+    .section-title {
+      padding-left: 0;
     }
   }
 }
